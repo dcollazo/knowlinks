@@ -1,0 +1,15 @@
+<%= form_for @link, url: {action: "create"} do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  
+  <%= f.label :url %>
+  <%= f.text_field :url %>
+  
+  <%= f.label :tag %>
+  <%= f.text_field :tag %>
+  
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+  </br>
+  <%= f.submit "Create Link", class: "btn btn-large btn-primary" %>
+<% end %>

@@ -1,0 +1,2 @@
+class LinkBundlesController < ApplicationController
+end
