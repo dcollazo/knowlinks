@@ -4,9 +4,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 gem 'bootstrap-sass'
-gem 'devise'
+gem 'devise', github: 'plataformatec/devise', branch: 'rails4'
 gem 'json'
-gem 'protected_attributes'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
