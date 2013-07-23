@@ -1,0 +1,11 @@
+<p><%= link_to(@link.title, @link) %></p>
+<p><%= link_to @link.url %></p>
+<p><%= @link.description %></p>
+<p><%= @link.tag %></p>
+<p><%= @link.month_year %></p>
+
+<p>
+  <%= link_to @link do %>
+    <%= image_tag @link.link_image.url(:main) %></p>
+  <% end %>
+</p>

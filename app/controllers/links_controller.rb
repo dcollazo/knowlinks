@@ -12,6 +12,13 @@ class LinksController < ApplicationController
       render :new
     end
   end
+
+  def update
+    if @link.update_attributes(user_params)
+      flash[:success] = "Link updated"
+      redirect_to links_path
+    end
+  end
   
   def show
     @link = Link.find(params[:id])
@@ -21,14 +28,11 @@ class LinksController < ApplicationController
     @links = Link.all
     @user_links = current_user.links
   end
-  
-  def destroy
-  end
 
   private
 
     def link_params
-      params.require(:link).permit(:title, :url, :tag, :description, :owner_id)
+      params.require(:link).permit(:title, :url, :tag, :description, :owner_id, :month_year, :link_image)
     end
 
 end

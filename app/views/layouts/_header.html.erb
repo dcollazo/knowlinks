@@ -1,25 +1,20 @@
-<div class='navbar' id='universal_nav'>
-  <div class='navbar-inner'>
-    <ul class='nav'>
-      <li class='active'>
-        <%= link_to 'Home', root_path %>
-      <li>
-        <%= link_to 'Links', links_path %>
-      </li>
-      <li>
-        <%= link_to 'New Link', new_link_path %>
-    </ul>
-    <ul class='nav-btn pull-right'>
+<ul class='nav nav-tabs'>
+  <li>
+    <%= link_to 'Home', root_path, "data-toggle" => "tab" %>
+  </li>
+  <li>
+    <%= link_to 'Links', links_path, "data-toggle" => "tab" %>
+  </li>
+  <li>
+    <%= link_to 'New Link', new_link_path, "data-toggle" => "tab" %>
+  </li>
+</ul>
 
-      <% unless user_signed_in? %>
-      <li>
-        <a class='btn btn-simple' href='/logins/new'>
-          <i class='icon-user icon-large'></i>
-          Login
-        </a>
-      </li>
-      <% end %>
 
-    </ul>
-  </div>
-</div>
+<ul class="nav nav-tabs">
+  <li><a href="#home" data-toggle="tab">Home</a></li>
+  <li><a href="#profile" data-toggle="tab">Profile</a></li>
+  <li><a href="#messages" data-toggle="tab">Messages</a></li>
+  <li><a href="#settings" data-toggle="tab">Settings</a></li>
+</ul>
+
