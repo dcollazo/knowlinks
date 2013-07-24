@@ -1,0 +1,13 @@
+<%= bootstrap_form_for(@snippet, html: { class: 'form-horizontal' }, help: :block) do |f| %>
+  <%= f.alert_message "Please fix the errors below." %>
+
+  <%= f.text_field :title, label: 'Title' %>
+  <%= f.text_field :tag, label: 'Tag' %>
+  <%= f.text_field :description, label: 'Description' %>
+  <%= f.text_field :weight, label: 'Weight' %>
+    <%= f.text_area :content, :cols => 20, class: 'content_field'  %>
+
+  <%= f.actions do %>
+    <%= f.primary 'Create snippet' %>
+  <% end %>
+<% end %>

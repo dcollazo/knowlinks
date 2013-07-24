@@ -7,6 +7,7 @@ gem 'rails', '4.0.0'
 
 gem 'bootstrap-sass'
 gem 'bootstrap_helper'
+gem 'bootstrap_form'
 
 gem 'devise', github: 'plataformatec/devise', branch: 'rails4'
 gem 'json'
