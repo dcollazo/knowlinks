@@ -2,13 +2,13 @@
   <li>
     <%= link_to 'Home', root_path %>
   </li>
-  <li>
-    <%= link_to 'Links', links_path %>
-  </li>
-  <li>
-    <%= link_to 'New Link', new_link_path %>
-  </li>
   <% if user_signed_in? %>
+    <li>
+      <%= link_to 'Links', links_path %>
+    </li>
+    <li>
+      <%= link_to 'New Link', new_link_path %>
+    </li>
     <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
     <li>Signed in as <%= current_user.email %></li>
   <% else %>

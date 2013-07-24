@@ -1,10 +1,14 @@
-<% @user_links.each do |link| %>
-  <p><%= link.title %></p>
-  <p><%= link_to link.url %></p>
-  <p><%= link.description %></p>
-  <p><%= link.tag %></p>
-  <p><%= link.month_year %></p>
-  <%= link_to link.url do %>
-    <%= image_tag link.link_image.url(:main) %></p>
+<% if !@user_links.empty? %>
+  <% @user_links.each do |link| %>
+    <p><%= link.title %></p>
+    <p><%= link_to link.url %></p>
+    <p><%= link.description %></p>
+    <p><%= link.tag %></p>
+    <p><%= link.month_year %></p>
+    <%= link_to link.url do %>
+      <%= image_tag link.link_image.url(:main) %></p>
+    <% end %>
   <% end %>
+<% else %>
+  <p>There are currently no links.</p>
 <% end %>
