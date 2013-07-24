@@ -1,6 +1,6 @@
 <% if !@user_links.empty? %>
   <% @user_links.each do |link| %>
-    <p><%= link.title %></p>
+    <p><%= link_to link.title, link %></p>
     <p><%= link_to link.url %></p>
     <p><%= link.description %></p>
     <p><%= link.tag %></p>

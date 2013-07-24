@@ -3,7 +3,7 @@ class Snippet < ActiveRecord::Base
   belongs_to :owner, :class_name => "User"
   has_attached_file :link_image, :styles => { :main => "150x150"}
 
-  def unique_url
+  def self.snippet_link
     returned_url = ""
     2.times do
       returned_url << random_letter

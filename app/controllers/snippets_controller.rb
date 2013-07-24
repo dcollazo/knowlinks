@@ -32,7 +32,7 @@ class SnippetsController < ApplicationController
   private
   
     def snippet_params
-      params.require(:snippet).permit(:title, :tag, :description, :weight, :content)
+      params.require(:snippet).permit(:title, :tag, :description, :weight, :content, :uuid)
     end
   
 end

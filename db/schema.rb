@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130724212530) do
+ActiveRecord::Schema.define(version: 20130724205200) do
 
   create_table "link_bundles", force: true do |t|
     t.string   "name"
@@ -34,13 +34,6 @@ ActiveRecord::Schema.define(version: 20130724212530) do
     t.string   "link_image_content_type"
     t.integer  "link_image_file_size"
     t.datetime "link_image_updated_at"
-  end
-
-  create_table "snippet_links", force: true do |t|
-    t.string   "title"
-    t.integer  "snippet_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "snippets", force: true do |t|

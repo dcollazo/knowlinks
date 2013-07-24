@@ -1,7 +1,13 @@
 Knowlinks::Application.routes.draw do
   devise_for :users
+  
   resources :links
-  resources :snippets
+  
+  resources :snippets do
+    collection do
+      get :snippet_link
+    end
+  end
   
   root to: "static_pages#home"
 
