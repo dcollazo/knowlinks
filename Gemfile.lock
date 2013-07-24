@@ -41,6 +41,10 @@ GEM
     bcrypt-ruby (3.1.1)
     bootstrap-sass (2.3.2.1)
       sass (~> 3.2)
+    bootstrap_helper (4.2.2.3)
+      railties (= 4.0.0)
+      thor (~> 0.14)
+      will_paginate (>= 3.0.3)
     builder (3.1.4)
     climate_control (0.0.3)
       activesupport (>= 3.0)
@@ -131,12 +135,14 @@ GEM
       multi_json (~> 1.0, >= 1.0.2)
     warden (1.2.3)
       rack (>= 1.0)
+    will_paginate (3.0.4)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   bootstrap-sass
+  bootstrap_helper
   coffee-rails (~> 4.0.0)
   devise!
   jbuilder (~> 1.2)
