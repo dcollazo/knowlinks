@@ -1,13 +1,18 @@
-<%= bootstrap_form_for(@snippet, html: { class: 'form-horizontal' }, help: :block) do |f| %>
-  <%= f.alert_message "Please fix the errors below." %>
+<%= form_for @snippet, :html => { :multipart => true } do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  
+  <%= f.label :tag %>
+  <%= f.text_field :tag %>
+  
+  <%= f.label :description %>
+  <%= f.text_area :description %>
 
-  <%= f.text_field :title, label: 'Title' %>
-  <%= f.text_field :tag, label: 'Tag' %>
-  <%= f.text_field :description, label: 'Description' %>
-  <%= f.text_field :weight, label: 'Weight' %>
-    <%= f.text_area :content, :cols => 20, class: 'content_field'  %>
+  <%= f.label :weight %>
+  <%= f.text_field :weight %>
+    <%= f.submit "Create snippet", class: "btn btn-large btn-primary" %>
 
-  <%= f.actions do %>
-    <%= f.primary 'Create snippet' %>
-  <% end %>
+  <%= f.label :content %>
+  <%= f.text_area :content, :cols => 20, class: 'content_field' %>
+  
 <% end %>
